@@ -104,8 +104,8 @@ client.on('message', message => {
 		}
 	}
 	if (message.content === `${prefix}bye` || message.content === `${prefix}Bye` || message.content === `${prefix}good bye` )  {
-		for(k = 0; k < emojies.length; k++){
-			message.reply(`Okay bye ${emojies[Math.floor(Math.random() * greets.length)]}, ${wishes[Math.floor(Math.random() * greets.length)]}.`);
+		for(k = 0; k < wishes.length; k++){
+			message.reply(`Okay bye ${emojies[Math.floor(Math.random() * emojies.length)]}, ${wishes[Math.floor(Math.random() * wishes.length)]}.`);
 			return;
 
 		}
@@ -137,7 +137,7 @@ client.on('message', message => {
 			}
 			if (message.content == `${names[j]}` ) {
 				for(k = 0; k < emojies.length; k++){
-					message.reply(`Yes ${emojies[Math.floor(Math.random() * greets.length)]}! \n Type \`phi help\` or \`phinixs help\` in chat for help `);
+					message.reply(`Yes ${emojies[Math.floor(Math.random() * emojies.length)]}! \n Type \`phi help\` or \`phinixs help\` in chat for help `);
 					return;
 
 				}
