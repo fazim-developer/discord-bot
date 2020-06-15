@@ -96,6 +96,13 @@ client.on('message', message => {
 	if (message.content === `${prefix}what are you` || message.content === `${prefix}who are you` )  {
 		message.reply(`I am regular old phinixs bot 😉.`);
 	}
+	if (message.content === `${prefix}thanks` || message.content === `${prefix}thank you` || message.content === `${prefix}thnx` )  {
+		for(k = 0; k < emojies.length; k++){
+			message.reply(`Your Welcome ${emojies[Math.floor(Math.random() * messages.length)]}.`);
+			return;
+
+		}
+	}
 
 
 });
