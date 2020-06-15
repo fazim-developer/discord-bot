@@ -81,7 +81,15 @@ client.on('message', message => {
 
 
 
-	//Newly Added touches
+});
+
+//Newly Added touches//
+
+client.on('message', message => {
+	let prefix = false;
+	for(const thisPrefix of prefixes) {
+	  if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
+	}
 	if (message.content === `${prefix}how are you` || message.content === `${prefix}how you doing`) {
 		message.reply(`I am fine, thanks for asking 😊.`);
 	}
