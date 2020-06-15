@@ -81,6 +81,15 @@ client.on('message', message => {
 
 
 
+	//Newly Added touches
+	if (message.content === `${prefix}how are you` || message.content === `${prefix}how you doing`) {
+		message.reply(`I am fine, thanks for asking 😊.`);
+	}
+	if (message.content === `${prefix}what are you` || message.content === `${prefix}who are you` )  {
+		message.reply(`I am regular old phinixs bot 😉.`);
+	}
+
+
 });
 
 //Normal Chat Sessions
