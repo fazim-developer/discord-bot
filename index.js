@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { token, names, addressing, messages, emojies, prefix } = require('./config.json');
+const { token, prefix, names, addressing, greets, emojies, wishes} = require('./config.json');
 const prefixes = ['Phi ', 'phi ', 'PHI ', 'Phinixs ', 'phinixs ', 'PHINIXS '];
 
 const client = new Discord.Client();
@@ -98,7 +98,14 @@ client.on('message', message => {
 	}
 	if (message.content === `${prefix}thanks` || message.content === `${prefix}thank you` || message.content === `${prefix}thnx` )  {
 		for(k = 0; k < emojies.length; k++){
-			message.reply(`Your Welcome ${emojies[Math.floor(Math.random() * messages.length)]}.`);
+			message.reply(`Your Welcome ${emojies[Math.floor(Math.random() * greets.length)]}.`);
+			return;
+
+		}
+	}
+	if (message.content === `${prefix}bye` || message.content === `${prefix}Bye` || message.content === `${prefix}good bye` )  {
+		for(k = 0; k < emojies.length; k++){
+			message.reply(`Okay bye ${emojies[Math.floor(Math.random() * greets.length)]}, ${wishes[Math.floor(Math.random() * greets.length)]}.`);
 			return;
 
 		}
@@ -111,7 +118,7 @@ client.on('message', message => {
 client.on('message', message => {
     for (i = 0; i < addressing.length; i++) {
 		if (message.content === `${addressing[i]}`) {
-			message.reply(`${messages[Math.floor(Math.random() * messages.length)]}`);
+			message.reply(`${greets[Math.floor(Math.random() * greets.length)]}`);
 		}
 	}
 
@@ -124,13 +131,13 @@ client.on('message', message => {
     for (i = 0; i < addressing.length; i++) {
 		for (j = 0; j< names.length; j++){
 			if (message.content == `${addressing[i]} ${names[j]}`) {
-				message.channel.send(`${messages[Math.floor(Math.random() * messages.length)]}`);
+				message.channel.send(`${greets[Math.floor(Math.random() * greets.length)]}`);
 				message.channel.send('Type \`phi help\` or \`phinixs help\` in chat for help ');
 				return;
 			}
 			if (message.content == `${names[j]}` ) {
 				for(k = 0; k < emojies.length; k++){
-					message.reply(`Yes ${emojies[Math.floor(Math.random() * messages.length)]}! \n Type \`phi help\` or \`phinixs help\` in chat for help `);
+					message.reply(`Yes ${emojies[Math.floor(Math.random() * greets.length)]}! \n Type \`phi help\` or \`phinixs help\` in chat for help `);
 					return;
 
 				}
