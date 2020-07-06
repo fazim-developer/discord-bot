@@ -5,5 +5,5 @@
 	"addressing": [ "hi", "hey", "hello", "Hi", "Hey", "Hello", "Hi", "Hlo" ],
 	"greets": [ "Sup!", "Hey mate!", "Wasuuuup!", "What's poppin!", "Hey there.", "Hi", "Hello there", "Hello", "Hey", "Hey, how are u ?", "Hi, what's up!"],
 	"wishes": ["Good bye", "See ya", "Good luck"],
-	"token": "NzIxMjMxMzE1NzA1NTI4MzQw.XuTTZw._4SBLl3QcO7WskPhRCwSESu8M3U"
+	"token": "your-token-here"
 }
