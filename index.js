@@ -117,9 +117,11 @@ client.on('message', message => {
 //Normal Chat Sessions
 client.on('message', message => {
     for (i = 0; i < addressing.length; i++) {
+
 		if (message.content === `${addressing[i]}`) {
 			message.reply(`${greets[Math.floor(Math.random() * greets.length)]}`);
 		}
+		if (message.author.bot) return;
 	}
 
 });
